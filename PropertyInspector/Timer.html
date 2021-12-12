@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui,viewport-fit=cover">
+    <meta name=apple-mobile-web-app-capable content=yes>
+    <meta name=apple-mobile-web-app-status-bar-style content=black>
+    <title>Soran's Stream Timer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/barraider/streamdeck-easypi@latest/src/sdpi.css">
+    <script src="https://cdn.jsdelivr.net/gh/barraider/streamdeck-easypi@latest/src/sdtools.common.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/barraider/streamdeck-easypi@latest/src/pickers.js"></script>
+</head>
+<body>
+    <div class="sdpi-wrapper">
+        <div class="sdpi-item" id="dvCounterTime">
+            <div class="sdpi-item-label">Time</div>
+            <input class="sdpi-item-value sdProperty" placeholder="00:05:00" value="" id="timerInterval" oninput="setSettings()">
+        </div>
+        <div type="color" class="sdpi-item" id="dvAlert">
+            <div class="sdpi-item-label">Alert Color</div>
+            <input type="color" class="sdpi-item-value sdProperty" value="#FF0000" id="alertColor" oninput="setSettings()">
+        </div>
+        <div id="dvSoundOnEndSettings">
+            <div class="sdpi-item" id="dvPlaybackDevices">
+                <div class="sdpi-item-label">Playback Device</div>
+                <select class="sdpi-item-value select sdProperty sdList" id="playbackDevices" oninput="setSettings()" sdListTextProperty="name" sdListValueProperty="name" sdValueField="playbackDevice"></select>
+            </div>
+            <div class="sdpi-item" id="dvSounds">
+                <div class="sdpi-item-label">Default Sound</div>
+                <select class="sdpi-item-value select sdProperty sdList" id="defaultSounds" oninput="setSettings()" sdListTextProperty="name" sdListValueProperty="name" sdValueField="defaultSound"></select>
+            </div>
+            <div class="sdpi-item" id="dvSoundFile">
+                <div class="sdpi-item-label">Sound File</div>
+                <div class="sdpi-item-group file" id="filepickergroup">
+                    <input class="sdpi-item-value sdProperty sdFile" type="file" id="playSoundOnEndFile" accept=".wav, .mp3, .ogg, .wma, .aac, .mp4" oninput="setSettings()">
+                    <label class="sdpi-file-info " for="playSoundOnEndFile" id="playSoundOnEndFileFilename">No file...</label>
+                    <label class="sdpi-file-label" for="playSoundOnEndFile">Choose file...</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
