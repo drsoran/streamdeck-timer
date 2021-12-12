@@ -1,0 +1,38 @@
+{
+  "Actions": [
+    {
+      "Icon": "Images/icon",
+      "Name": "Stream Timer",
+      "States": [
+        {
+          "Image": "Images/pluginAction",
+          "TitleAlignment": "middle",
+          "FontSize": "15"
+        }
+      ],
+      "SupportedInMultiActions": true,
+      "Tooltip": "Simple, recurring timer.",
+      "UUID": "com.drsoran.timerplugin",
+      "PropertyInspectorPath": "PropertyInspector/Timer.html"
+    }
+  ],
+  "Author": "Soran",
+  "Description": "Simple, recurring timer.",
+  "Name": "Stream Timer",
+  "Icon": "Images/pluginIcon",
+  "URL": "https://BarRaider.com/",
+  "Version": "1.0",
+  "CodePath": "streamdeck-timer",
+  "Category": "Timer [Soran]",
+  "CategoryIcon": "",
+  "OS": [
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "SDKVersion": 2,
+  "Software": {
+    "MinimumVersion": "4.9"
+  }
+}
